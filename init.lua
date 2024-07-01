@@ -130,6 +130,7 @@ require('lazy').setup({
   require 'plugins.barbar',
   require 'plugins.nvim-tree',
   require 'plugins.telescope',
+  require 'plugins.harpoon',
   -- terminal
   require 'plugins.vim-floatterm',
   require 'plugins.vim-tmux-navigator',
