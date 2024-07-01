@@ -1,51 +1,50 @@
 return {
-  'windwp/nvim-ts-autotag',
-  dependencies = 'nvim-treesitter/nvim-treesitter',
-  version = '*',
-  config = function()
-    local options = {
-      auto_install = true,
-      ensure_installed = {
-        'lua',
-        'vim',
-        'go',
-        'toml',
-        'css',
-        'tsx',
-        'css',
-        'html',
-        'lua',
-      },
-      highlight = {
-        enable = true,
-        use_languagetree = true,
-      },
-      autotag = {
-        enable = true,
-        filetypes = {
-          'html',
-          'javascript',
-          'typescript',
-          'javascriptreact',
-          'typescriptreact',
-          'svelte',
-          'vue',
-          'tsx',
-          'jsx',
-          'rescript',
-          'css',
+    'windwp/nvim-ts-autotag',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    version = '*',
+    config = function()
+      local options = {
+        auto_install = true,
+        ensure_installed = {
           'lua',
-          'xml',
-          'php',
-          'markdown',
+          'vim',
+          'go',
+          'toml',
+          'css',
+          'tsx',
+          'css',
+          'html',
+          'lua',
         },
-      },
-      indent = { enable = true },
-    }
+        highlight = {
+          enable = true,
+          use_languagetree = true,
+        },
+        autotag = {
+          enable = true,
+          filetypes = {
+            'html',
+            'javascript',
+            'typescript',
+            'javascriptreact',
+            'typescriptreact',
+            'svelte',
+            'vue',
+            'tsx',
+            'jsx',
+            'rescript',
+            'css',
+            'lua',
+            'xml',
+            'php',
+            'markdown',
+          },
+        },
+        indent = { enable = true },
+      }
 
-    require('nvim-treesitter.configs').setup(options)
-  end,
-  lazy = true,
-  event = 'VeryLazy',
+      require('nvim-ts-autotag').setup(options)
+    end,
+    lazy = true,
+    event = 'VeryLazy',
 }
-

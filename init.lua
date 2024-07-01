@@ -105,6 +105,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require 'autocmds.general'
+require 'autocmds.no-trailing-comments'
 
 ------------------------------------
 --
@@ -126,13 +127,16 @@ require('lazy').setup({
   require 'plugins.gitsigns',
   require 'plugins.lazygit',
   -- utility
-  require 'plugins.barbar' ,
+  require 'plugins.barbar',
   require 'plugins.nvim-tree',
   require 'plugins.telescope',
-  require 'plugins.theme',
   -- terminal
   require 'plugins.vim-floatterm',
   require 'plugins.vim-tmux-navigator',
+  -- themes
+  require 'themes.tokyonight',
+  require 'themes.catppuccin',
+  require 'themes.onedark',
   -- editors
   require 'plugins.comment',
   require 'plugins.conform',
@@ -140,6 +144,7 @@ require('lazy').setup({
   require 'plugins.indent_line',
   require 'plugins.lint',
   require 'plugins.autopairs',
+  require 'plugins.nvim-ts-autotag',
   require 'plugins.mini-nvim',
   require 'plugins.neogen',
   require 'plugins.nvim-cmp',
@@ -168,6 +173,14 @@ require('lazy').setup({
     },
   },
 })
+
+------------------------------------------------
+--
+-- Theme
+--
+------------------------------------------------
+vim.cmd.colorscheme 'catppuccin'
+vim.cmd.hi 'Comment gui=none'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
