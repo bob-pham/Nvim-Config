@@ -131,6 +131,7 @@ require('lazy').setup({
   require 'plugins.nvim-tree',
   require 'plugins.telescope',
   require 'plugins.harpoon',
+  require 'plugins.leap',
   -- terminal
   require 'plugins.vim-floatterm',
   require 'plugins.vim-tmux-navigator',
