@@ -154,6 +154,7 @@ require('lazy').setup({
   require 'plugins.vim-sleuth',
   require 'plugins.vimtex',
   require 'plugins.which-key',
+  require 'plugins.ufo',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
