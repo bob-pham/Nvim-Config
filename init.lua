@@ -139,6 +139,7 @@ require('lazy').setup({
   require 'themes.tokyonight',
   require 'themes.catppuccin',
   require 'themes.onedark',
+  require 'plugins.alpha',
   -- editors
   require 'plugins.comment',
   require 'plugins.conform',
@@ -155,6 +156,7 @@ require('lazy').setup({
   require 'plugins.vimtex',
   require 'plugins.which-key',
   require 'plugins.ufo',
+  require 'plugins.overseer',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -184,6 +186,7 @@ require('lazy').setup({
 ------------------------------------------------
 vim.cmd.colorscheme 'catppuccin'
 vim.cmd.hi 'Comment gui=none'
+-- vim.notify = require('notify')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
