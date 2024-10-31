@@ -18,7 +18,6 @@ vim.g.mapleader = ' ' -- Set <space> as the leader key
 vim.g.maplocalleader = ' '
 
 vim.opt.mouse = 'a' -- Enable mouse mode
-vim.opt.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
 vim.opt.breakindent = true -- Enable break indent
 vim.opt.undofile = true -- Save undo history
 vim.opt.ignorecase = true -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -84,17 +83,6 @@ require 'mappings.which-key'
 -------------------------------------
 --  See `:help lua-guide-autocommands`
 
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -106,6 +94,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require 'autocmds.general'
 require 'autocmds.no-trailing-comments'
+require 'autocmds.luasnip-fix'
+require 'autocmds.clipboard'
+require 'autocmds.yank-highlight'
 
 ------------------------------------
 --
