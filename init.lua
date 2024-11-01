@@ -18,6 +18,7 @@ vim.g.mapleader = ' ' -- Set <space> as the leader key
 vim.g.maplocalleader = ' '
 
 vim.opt.mouse = 'a' -- Enable mouse mode
+vim.opt.clipboard = "unnamedplus"
 vim.opt.breakindent = true -- Enable break indent
 vim.opt.undofile = true -- Save undo history
 vim.opt.ignorecase = true -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
