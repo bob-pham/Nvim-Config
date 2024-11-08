@@ -96,7 +96,6 @@ vim.opt.rtp:prepend(lazypath)
 require 'autocmds.general'
 require 'autocmds.no-trailing-comments'
 require 'autocmds.luasnip-fix'
-require 'autocmds.clipboard'
 require 'autocmds.yank-highlight'
 
 ------------------------------------
@@ -132,6 +131,8 @@ require('lazy').setup({
   require 'themes.catppuccin',
   require 'themes.onedark',
   require 'plugins.alpha',
+  -- fun
+  require 'plugins.leetcode',
   -- editors
   require 'plugins.comment',
   require 'plugins.conform',
