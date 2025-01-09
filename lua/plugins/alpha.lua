@@ -39,6 +39,9 @@ return {
       '            :77^:::^7#@@@@@@@@@&5:                          ',
       '              ^?PB&@@@@@@@&B5!.                             ',
     }
+
+    dashboard.section.header.opts.hl = "Title"
+
     -- only for footer
     function centerText(text, width)
       local totalPadding = width - #text
@@ -54,6 +57,7 @@ return {
       centerText(version, 50),
     }
 
+    dashboard.section.footer.opts.hl = "Title"
     dashboard.section.buttons.val = {}
     -- Send config to alpha
     alpha.setup(dashboard.opts)
