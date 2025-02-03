@@ -1,6 +1,6 @@
 return {
   'stevearc/overseer.nvim',
   opts = {},
-  dependencies = { 'stevearc/dressing.nvim', 'rcarriga/nvim-notify' },
+  dependencies = { 'stevearc/dressing.nvim' },
   -- require('overseer').setup()
 }
