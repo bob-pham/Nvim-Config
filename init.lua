@@ -49,8 +49,6 @@ vim.opt.inccommand = 'split' -- Preview substitutions live, as you type!
 vim.opt.cursorline = true -- Show which line your cursor is on
 
 vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
-vim.g.floaterm_height = 0.4
-vim.g.floaterm_position = 'bottomright'
 
 ------------------------------------
 --

@@ -19,8 +19,16 @@ return {
     map('t', '<F9>', '<C-\\><C-n>:FloatermNext<CR>')
     map('n', '<F8>', ':FloatermToggle<CR>')
     map('t', '<F8>', '<C-\\><C-n>:FloatermToggle<CR>')
+
+    vim.g.floaterm_height = 0.5
+    vim.g.floaterm_width = 0.5
+    vim.g.floaterm_position = 'center'
+    vim.g.floaterm_wintype = 'float'
+    vim.g.floaterm_titleposition = 'center'
+
     local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
     local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
     augroup('Floaterm', { clear = true })
     autocmd('FileType', {
       group = 'Floaterm',
@@ -34,28 +42,28 @@ return {
           0,
           'n',
           '<F4>',
-          ':FloatermUpdate --width=1.0 --height=0.3 --wintype=split --position=botright<CR>',
+          ':FloatermUpdate --width=1.0 --height=0.3 --wintype=float --position=center<CR>',
           { silent = true, noremap = true }
         )
         vim.api.nvim_buf_set_keymap(
           0,
           't',
           '<F4>',
-          '<C-\\><C-n>:FloatermUpdate --width=1.0 --height=0.3 --wintype=split --position=botright<CR>',
+          '<C-\\><C-n>:FloatermUpdate --width=1.0 --height=0.3 --wintype=float --position=center<CR>',
           { silent = true, noremap = true }
         )
         vim.api.nvim_buf_set_keymap(
           0,
           'n',
           '<F6>',
-          ':FloatermUpdate --width=0.4 --height=0.4 --wintype=float --position=bottomright<CR>',
+          ':FloatermUpdate --width=0.4 --height=0.4 --wintype=float --position=center<CR>',
           { silent = true, noremap = true }
         )
         vim.api.nvim_buf_set_keymap(
           0,
           't',
           '<F6>',
-          '<C-\\><C-n>:FloatermUpdate --width=0.4 --height=0.4 --wintype=float --position=bottomright<CR>',
+          '<C-\\><C-n>:FloatermUpdate --width=0.4 --height=0.4 --wintype=float --position=center<CR>',
           { silent = true, noremap = true }
         )
         vim.api.nvim_buf_set_keymap(0, 't', '<ESC>', '<C-\\><C-n>', { silent = true, noremap = true })
@@ -63,4 +71,3 @@ return {
     })
   end,
 }
-
